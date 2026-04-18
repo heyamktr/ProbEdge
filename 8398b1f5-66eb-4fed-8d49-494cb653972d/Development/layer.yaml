@@ -1,0 +1,246 @@
+id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+name: Development
+type: 1
+canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+blocks:
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: 'Generates comprehensive audit report of market prediction signals:
+    data quality checks, signal summary (underpriced/overpriced events), top 10 mispricing
+    opportunities, model performance metrics, backtest validation, feature drivers,
+    category breakdown, and visualizations of gap distribution and confidence scores.'
+  height: 1000
+  id: 14d88a08-7bec-4d54-bfd7-ce8c5b10e2d4
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: market_signal_auditor
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4700
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: "Documentation overview of the Market Signal Auditor\u2014an ML pipeline\
+    \ that identifies mispricings in prediction markets by enriching events with 36\
+    \ signals, training calibrated classifiers, and ranking opportunities by gap size\
+    \ and confidence."
+  height: 1000
+  id: 1d62f946-8b3e-411c-9045-7ef333e1f724
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: project_documentation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 6000
+  y: 0
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Ingests 50 prediction market events from Polymarket API (with fallback
+    dataset), categorizes them across 5 domains, and engineers 36 quantitative signals
+    (sentiment, market, temporal, calibration) to produce a enriched feature matrix
+    for market forecasting models.
+  height: 1000
+  id: 1e258419-8bc1-4e38-a81b-72ea7afde8b9
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: data_ingestion_feature_engineering
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: "Renders a 2\xD72 evaluation dashboard for a prediction market model,\
+    \ displaying calibration curves across three models (Blended/LR/GBM), top 12 feature\
+    \ drivers color-coded by signal family, a mispricing distribution showing underpriced/overpriced\
+    \ events, and confidence score tiers\u2014with summary metrics (Brier Score, ECE,\
+    \ AUC, high-confidence %) printed below."
+  height: 1000
+  id: 2bd02259-6f63-482e-804d-3c83da3a3951
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: evaluation_artifacts
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Generates 6 production-ready deployment files (Dockerfile, docker-compose.yml,
+    requirements.txt, GitHub Actions CI/CD, .env template, and README) for a containerized
+    Polymarket prediction market application with Streamlit UI and FastAPI backend.
+  height: 1000
+  id: 91a241a4-074e-4c0c-b278-bf54d8de09e7
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: deployment_files_generator
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1400
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Generates AI-powered explanations for prediction-market pricing anomalies.
+    Uses local LLM (Ollama) when available, otherwise applies rich rule-based fallback
+    logic to explain why model probability diverges from market consensus, highlighting
+    top 3 driving features and caveat risks.
+  height: 1000
+  id: a6940451-2be9-4d43-85a6-e3a32869b26d
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: llm_explanation_engine
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2800
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: "3-minute demo video script for Market Signal Auditor\u2014detailed\
+    \ production guide covering hook, pipeline overview, Streamlit dashboard walkthrough,\
+    \ results with metrics, and CTA. Includes timing, voiceover copy, on-screen action\
+    \ cues, and speaker notes for technical/investor audience."
+  height: 1000
+  id: bf48e988-a01f-48ab-925c-5b29eadf6d33
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: demo_video_script
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 6000
+  y: 1400
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Audits all dashboard variables for presence, type correctness, and
+    structure. Validates 10 DataFrames/dicts/Figures from upstream blocks and documents
+    their metadata for Streamlit deployment.
+  height: 1000
+  id: ca17725b-8da7-47f6-a080-9acf96d96bce
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: dashboard_variable_audit
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 4700
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Trains and calibrates probabilistic prediction models (logistic regression
+    + gradient boosting) to detect mispriced events in prediction markets. Blends
+    market consensus with sentiment/keyword signals to estimate fair probabilities,
+    ranks mispricing opportunities by magnitude and confidence, and generates interpretable
+    narratives explaining each prediction.
+  height: 1000
+  id: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: probability_estimation_mispricing
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  compute_settings: null
+  description: Fetches ~150 resolved Polymarket events via CLOB API, matches them
+    to model predictions, generates 200 synthetic model-consistent events, then computes
+    comprehensive backtest metrics (Brier score, calibration, accuracy) comparing
+    model vs. market probabilities across real and simulated cohorts.
+  height: 1000
+  id: e01d8218-4b6f-428b-9142-27c4ab9dfca6
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  name: backtest_validation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4200
+edges:
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 00425bc9-84a7-4a08-b41b-9bb95e74c738
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+  target: e01d8218-4b6f-428b-9142-27c4ab9dfca6
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 10585f81-9bad-4966-97d6-ed30431fdc7d
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: 2bd02259-6f63-482e-804d-3c83da3a3951
+  target: bf48e988-a01f-48ab-925c-5b29eadf6d33
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 25e1feba-2886-40bf-bfe5-c41f258c96ec
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: 14d88a08-7bec-4d54-bfd7-ce8c5b10e2d4
+  target: ca17725b-8da7-47f6-a080-9acf96d96bce
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 43c54cc8-f5a2-4e55-9681-4d6cc39b0a5d
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: 1e258419-8bc1-4e38-a81b-72ea7afde8b9
+  target: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 5d0518d6-23c0-4edb-ba31-bdeeadcbb093
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: 2bd02259-6f63-482e-804d-3c83da3a3951
+  target: ca17725b-8da7-47f6-a080-9acf96d96bce
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: 9d2eefcc-89a1-46b4-bda4-f511dec005f4
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+  target: a6940451-2be9-4d43-85a6-e3a32869b26d
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: a6b22056-2cea-4440-8914-310010b05c52
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+  target: 2bd02259-6f63-482e-804d-3c83da3a3951
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: c70ebde5-ee4d-46b5-bffd-41a7b75b6214
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: 2bd02259-6f63-482e-804d-3c83da3a3951
+  target: 1d62f946-8b3e-411c-9045-7ef333e1f724
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: dd367231-45e0-492d-a63c-1d35c1e40c80
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: e01d8218-4b6f-428b-9142-27c4ab9dfca6
+  target: 14d88a08-7bec-4d54-bfd7-ce8c5b10e2d4
+- canvas_id: 8398b1f5-66eb-4fed-8d49-494cb653972d
+  id: dff21af7-6a0e-4425-99b0-c6cc5b6645d3
+  layer_id: 4cb799bf-ad84-44f1-acb5-74dc704c5bfa
+  source: d69af83d-4ce9-4a8c-85ee-7956d6b4a803
+  target: 91a241a4-074e-4c0c-b278-bf54d8de09e7
