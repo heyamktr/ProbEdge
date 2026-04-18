@@ -177,7 +177,7 @@ ax_misprice.text(0.98, 0.97, stats_txt, transform=ax_misprice.transAxes, fontsiz
 
 ax_misprice.set_xlabel("Mispricing Gap (Model − Market, percentage points)")
 ax_misprice.set_ylabel("Number of Events")
-ax_misprice.set_title("Mispricing Distribution — 50 Events", fontweight="bold", color=TEXT_PRI)
+ax_misprice.set_title(f"Mispricing Distribution — {len(analyzed_events)} Events", fontweight="bold", color=TEXT_PRI)
 ax_misprice.legend(fontsize=9, facecolor="#2a2a2d", edgecolor=TEXT_SEC, labelcolor=TEXT_PRI, framealpha=0.88)
 ax_misprice.grid(axis="y", alpha=0.12, lw=0.7)
 ax_misprice.spines[["top", "right"]].set_visible(False)
